@@ -16,8 +16,10 @@ const Form = () => {
             })
             );
             setTask("");
+            return;
         }else{
             alert("please add  some todos")
+            return;
         }
     };
 
