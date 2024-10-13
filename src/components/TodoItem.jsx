@@ -11,7 +11,7 @@ const TodoItem = ({ title, done, id }) => {
     }
 
     return (
-        <div className='bg-white text-black p-2 inline-block'>
+        <div className='outline-none bg-transparent border border-gray-500 p-4 w-[300px] text-white'>
             <input
                 type='checkbox'
                 id={id}
