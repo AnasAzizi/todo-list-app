@@ -1,6 +1,8 @@
 import { React, useState } from 'react'
 import { useDispatch } from 'react-redux';
 import { addTodo } from '../features/TodoSlice';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Form = () => {
 
@@ -16,10 +18,13 @@ const Form = () => {
             })
             );
             setTask("");
+            toast.success('Todo added successfully!');
             return;
         }else{
-            alert("please add  some todos")
+            toast.error('please add  some todos');
+
             return;
+            
         }
     };
 
@@ -32,6 +37,7 @@ const Form = () => {
                     value={task}
                     onChange={(e) => setTask(e.target.value)} />
                 <button type='submit' className='bg-gray-800 rounded-md text-white p-3 m-3 border-none '>Add Task</button>
+                <ToastContainer />
             </form>
         </>
     )
