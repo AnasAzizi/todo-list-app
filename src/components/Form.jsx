@@ -25,7 +25,7 @@ const Form = () => {
 
     return (
         <>
-            <form className='mb-4' onSubmit={handleSubmit}>
+            <form onSubmit={handleSubmit}>
                 <input className='outline-none bg-transparent border border-gray-500 p-4 w-[300px] text-white mb-8 placeholder:text-gray-300'
                     placeholder='What task do you have today ?'
                     type='text'

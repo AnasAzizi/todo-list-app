@@ -4,11 +4,10 @@ import TodoList from './components/TodoList'
 const App = () => {
   return (
     <>
-    <div>
+    <div className='bg-gray-500 h-screen w-screen'>
     <TodoList/>
     </div>
     </>
-
   )
 }
 

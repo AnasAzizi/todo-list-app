@@ -11,14 +11,14 @@ const TodoItem = ({ title, done, id }) => {
     }
 
     return (
-        <div className='outline-none bg-transparent border border-gray-500 p-4 w-[300px] text-white'>
+        <div className='flex justify-between items-center gap-12 outline-none bg-transparent border border-gray-500 p-4 w-auto min-w-96 text-white'>
+            <label htmlFor={id}>{title}</label>
             <input
                 type='checkbox'
                 id={id}
                 checked={done}
                 onChange={handleChange}
             />
-            <label className='ml-48' htmlFor={id}>{title}</label>
         </div>
     )
 }
